@@ -163,7 +163,7 @@ async function plantGenerator () {
 async function heroGenerator() { 
 
   const result = await axios ({ 
-    url: 'http://api.icndb.com/jokes/random', 
+    url: 'https://api.icndb.com/jokes/random', 
     method: 'get', 
   }); 
 
