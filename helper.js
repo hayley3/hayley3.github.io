@@ -115,7 +115,7 @@ async function colorGenerator () {
   let reqColor = Math.floor(Math.random()*16777215).toString(16); 
 
   const result = await axios ({ 
-    url: 'http://thecolorapi.com/id?hex=' + reqColor,
+    url: 'https://thecolorapi.com/id?hex=' + reqColor,
     method: 'GET', 
   })
 
