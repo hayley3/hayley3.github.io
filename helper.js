@@ -112,19 +112,25 @@ async function cancelQS() {
 
 async function colorGenerator () { 
 
-  let reqColor = Math.floor(Math.random()*16777215).toString(16); 
+  let api_key = '89525be7-5e61-4973-b7ba-e6d411124d48'; 
 
   const result = await axios ({ 
-    url: 'http://thecolorapi.com/id?hex=' + reqColor,
+    headers: { 
+      'x-api-key': '89525be7-5e61-4973-b7ba-e6d411124d48', 
+    }, 
+    params: { 
+      limit: 1,
+      size: "full", 
+    }, 
+    url: 'https://api.thecatapi.com/v1/images/search',
     method: 'GET', 
   })
 
-  let name = result.data.name['value'];  
-  let hexVal = result.data.hex['value']; 
 
-  $("#boxHold").replaceWith(`<div id = "boxHold">  <p> ${name} </p> 
-  <div class = "box" id = "colorBox" style = "background-color: ${hexVal}"> </div>
-  </div> `)
+  let imgUrl = result.data[0].url; 
+
+  $("#boxHold").replaceWith(`<div id = "boxHold"> 
+  <img src = "${imgUrl}"> </div>  `)
 }
 
 async function dogGenerator () { 
