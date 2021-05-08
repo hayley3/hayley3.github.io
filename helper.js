@@ -147,39 +147,27 @@ async function dogGenerator () {
 
 async function plantGenerator () { 
 
+
   const result = await axios ({ 
-    url: 'https://zenquotes.io/api/random/', 
+    url: 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/creativity?key=83402e07-dca2-4536-bf7e-f517b7c8d7c6', 
     method: 'get',  
-  }) 
+  });  
 
-  /* let plateName = result.data.data[endID]['common_name']; 
-  let imgUrl = result.data.data[endID]['image_url']; 
+  let quoteDiv = result.data[0].meta['id']; 
 
-  $("#plantimg").replaceWith(`<div id = "plantimg" > <h4> ${plateName} </h4>
-  <img src = "${imgUrl}" alt="random dog!"> </div>`); */ 
-
-  let quoteDiv = result.data[0]['h']
-
-  $("#poemText").replaceWith(`<div id = "poemText" > Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a> 
-  <br> ${quoteDiv} </div>`);
+  $("#poemText").replaceWith(`<div id = "poemText" > 
+  <br> ${quoteDiv}  <br> definition: ${result.data[0].shortdef[0]} </div>`);
 
 }
 
 async function heroGenerator() { 
 
-  let id = Math.floor(Math.random() * 731) + 0;   
-
   const result = await axios ({ 
-    url: 'https://superheroapi.com/api/110956627813741/' + id + '/image', 
+    url: 'http://api.icndb.com/jokes/random', 
     method: 'get', 
   }); 
 
-  let name = result.data['name']; 
-
-  let imgUrl = result.data['url']; 
-
-  $("#heroImg").replaceWith(`<div id = "heroImg" > <h4> ${name} </h4>
-  <img src = "${imgUrl}" alt="random dog!"> </div>`); 
+  $("#heroImg").replaceWith(`<div id = "heroImg" > <h4> ${result.data.value['joke']} </h4>  </div>`); 
 }
 
 async function disneyGenerator() { 
