@@ -5,8 +5,8 @@ let game = new Game();
 
 let gameView = new View(document.getElementById("gameBoard")); 
 
-gameView.clickTile = function (i) { 
-    game.move(i); 
+gameView.clickTile = function (index) { 
+    game.move(index); 
     gameView.updateBoard(game); 
 }; 
 

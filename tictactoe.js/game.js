@@ -13,13 +13,13 @@ export default class Game {
         }
     }
 
-    move(i) { 
+    move(index) { 
 
-        if(!this.isOver() || this.board[i]) { 
+        if(!this.isOver() || this.board[index]) { 
             return; 
         }
 
-        this.board[i] = this.turn; 
+        this.board[index] = this.turn; 
 
         if(!this.isWon()) { 
             this.next(); 
