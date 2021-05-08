@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Ken's Kicks </title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" /> -->
+        <link rel = "stylesheet" href="socials.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" /> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9e99a20f71.js" crossorigin="anonymous"></script>
+    </head>
+    <body style = "background-color: #ffffbf;">
+
+        <button class ="button" style = "border: hidden; background-color: #ffffbf;" onclick="document.location='index.html#aboutShop'">
+            <div style = "color: grey;"> <i class="fas fa-arrow-left fa-5x"></i> </div>
+        </button> 
+            <br><br>
+
+            <div class = "container">
+                <div class = "content is-large"> 
+              <h1> Endless design possibilities! <h1>
+              <div class="subtitle">but if you can't think of one we're here to help...</div>
+              </div>
+            </div>
+    
+            <div class= "container" id = "colorGen">
+              <div class = "content is-medium"> 
+                  <h1> Let's start with a color! </h1>
+                  <button class = "button" id = "colGen" > generate  </button> 
+                  <p></p>
+                  <div id = "boxHold"> 
+                  <div class = "box" id = "colorBox" > </div> </div>
+              </div>
+            </div>
+
+            <div class= "container" id = "dogGen">
+                <div class = "content is-medium"> 
+                    <h1> Maybe add a dog! </h1>
+                    <button class = "button" id = "dogG" > generate  </button> 
+                    <p></p>
+                    <div id = "dogimg" > </div>
+                </div>
+            </div>
+
+            <div class= "container" id = "heroGen">
+                <div class = "content is-medium"> 
+                    <h1> Maybe a Super Hero! </h1>
+                    <button class = "button" id = "heroG" > generate </button> 
+                    <p></p>
+                    <div id = "heroImg" > </div>
+                </div>
+            </div>
+
+            <div class= "container" id = "heroGen">
+                <div class = "content is-medium"> 
+                    <h1> Are you a Disney Fan? </h1>
+                    <button class = "button" id = "disneyG" > generate </button> 
+                    <p></p>
+                    <div id = "disneyImg" > </div>
+                </div>
+            </div>
+
+            <div class= "container" id = "poemGen">
+                <div class = "content is-medium"> 
+                    <h1> Maybe a meaningful quote! </h1>
+                    <button class = "button" id = "poemG" > generate </button> 
+                    <p></p>
+                    <div id = "poemText" > </div>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class = "title" style = "text-align: center;"> 
+                Go Back to Quick Shop to add to your cart!
+            </div>
+              
+        <!-- Include links to JavaScript files below -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="helper.js" type="module"></script>
+        <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </body>
+</html>

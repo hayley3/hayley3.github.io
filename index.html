@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Ken's Kicks </title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" /> 
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/9e99a20f71.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <nav class = "navbar is-fixed-top" role = "navigation" aria-label = "main navigation" > 
+
+            <a class="navbar-item" href="#screenTop">
+                Ken's Kicks! 
+            </a>
+        
+            <div class = "navbar-menu">
+                <div class = "navbar-end"> 
+                    <a class = "navbar-item" id = "aboutNav" href="#aboutSec"> 
+                        About
+                    </a>
+                    <a class = "navbar-item" id = "galleryNav" href="#aboutGallery"> 
+                        Gallery
+                    </a>
+                    <a class = "navbar-item" id = "shopNav" href="#aboutShop"> 
+                        Shop
+                    </a>
+                    <a class = "navbar-item" id = "contactNav" href="#aboutContact"> 
+                        Contact
+                    </a> 
+                
+                <div id = "cartA"> 
+                    <div class="navbar-item has-dropdown is-hoverable" style = "padding-right: 40px;" >
+                        <a class="navbar-link">
+                          <i class="fas fa-shopping-cart"> </i> Cart
+                        </a>
+                        <div class="navbar-dropdown is-right" id = "cart">
+                        </div>
+                    </div>
+                </div> <!-- this is where the cart id ends-->
+                </div> 
+            </div>
+        </nav>
+        
+        <div class = "scrolling-box">
+        <div class="container has-text-centered" id = "screenTop">
+            <div class="slider">
+                <section  style="background-color: #FCE710;">
+                    <img src = "images/cropped.png" alt = "slide1" class = "sliderimg">
+                </section>
+                <section> <!-- style="background-color: #2A4417;" -->
+                    <img src = "images/carolina.JPG" alt = "slide1" class = "sliderimg">
+                </section>
+                <section>
+                    <img src = "images/smiles.JPG" alt = "slide1" class = "sliderimg">
+                </section>
+                <section>
+                    <img src = "images/waves.JPG" alt = "slide1" class = "sliderimg">
+                </section>
+                <section>
+                    <img src = "images/lips.jpeg" alt = "slide1" class = "sliderimg">
+                </section>
+            </div>
+        </div>
+        
+        
+        
+         <div class="columns is-vcentered" style="background-color: #FBC7FF;" id= "aboutSec"> 
+            <div class="column">
+                <div class = "frontPhoto">
+                    <img src = "images/kenhead.png" alt = "headshot"> 
+                </div> 
+            </div>
+            <div class="column" >
+                    <div class = "title">Meet Makenna!</div>
+                    <div class="subtitle">Founder of Ken's Kicks</div>
+                    <p> Hello! My name is MaKenna McGough and I am an undergraduate student at 
+                        UNC Chapel Hill. I first started custom painting shoes, helmets, and water bottles 
+                        for family and friends over quarantine last March. Now, Kens Kicks has allowed me to 
+                        combine my passion for art and nutrition by donating 10% of the profits I make to NEDA.
+                        My goal is for people to enjoy their custom painted items while also helping to raise 
+                        awareness around eating disorders, especially in the college realm.</p>
+                </div>
+          </div>
+        
+         <div class="columns is-vcentered" style="background-color: #E57AFE;" id ="aboutGallery">
+            <div class="column">
+                <div class = "frontPhoto">
+                    <img src = "images/flower.JPG" alt = "firstShoe"> 
+                </div> 
+            </div>
+            <div class="column">
+                <div class = "container is-widescreen"> 
+                    <div class = "title"> Check out these kicks!</div>
+                    <div class="subtitle"> Made to order! </div>
+                    <p> We can customize pretty much anything you send our way from shoes 
+                       to helmets! We're always looking to expand and can customize to
+                        whatever you want! 
+                    </p>
+                    <br> <br> 
+                    <button class="button is-light" id = "socialPages" onclick="document.location='socials.html'"> our socials! </button>
+                </div>
+            </div>
+         </div>
+        
+         <div id="root"> </div>
+        
+        
+         <div class="columns is-vcentered" style="background-color: #A0D3FD;" id ="aboutContact">
+            <div class="column">
+                <div class = "frontPhoto">
+                    <img src = "images/helmet.jpeg" alt = "firstShoe"> 
+                </div> 
+            </div>
+            <div class = "column">
+                <div class = "container is-widescreen"> 
+                    <div class = "title"> Reach out and follow our socials</div>
+                    <h4> <a href="https://www.instagram.com/kens__kicks/">  <i class="fab fa-instagram"></i> @kens__kicks </a> </h4>
+                    <h4> <a href="https://twitter.com/kens_kicks"> <i class="fab fa-twitter"></i> @kens_kicks </a> </h4>
+                    <br> 
+                    <button class="button is-light" id = "tictactoeB" onclick="document.location='tictactoe.html'"> Play TicTacToe with Ken's Kicks! </button>
+                </div>
+            </div>
+         </div>
+        
+        </div>
+        
+        <img src = "images/donthate.PNG" alt= "dont hate banner" style="width: 100%;"> 
+
+        <!-- Include links to JavaScript files below -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="helper.js"></script>
+        <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </body>
+</html>
